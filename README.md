@@ -1,6 +1,6 @@
 # Postgres Serializability Bug
 
-The follow applies to at least postgres 9.4 and 9.5.
+The follow applies to at least postgres 9.3, 9.4, and 9.5.
 
 To reproduce, run `./run-test.sh` if you have a postgres running on
 localhost; you can set the `PG_USER` and `PG_DB` env variables as
