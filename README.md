@@ -39,11 +39,11 @@ from running the two transactions one at a time. I.e., either process
 A sees `[A]` and process B sees `[A, B]`, or process A sees `[B, A]` and
 process B sees `[B]` (ignoring possible ordering differences).
 
-This is the result we see ~99% of the time, but occasionally we will
-see that A sees `[A]` and B sees `[B]`, even though both transactions
-succeed.
+This is the result we see ~99% of the time, but occasionally (about
+once in every several hundred runs) we will see that A sees `[A]` and
+B sees `[B]`, with both transactions succeeding.
 
-## Modifications
+## Variants
 
 I've also tried this with an `INSERT` into a logging table after the
 `SELECT`, containing the results of the `SELECT`, just to ensure that
