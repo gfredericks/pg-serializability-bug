@@ -45,8 +45,6 @@ B sees `[B]`, with both transactions succeeding.
 
 ## Variants
 
-I've also tried this with an `INSERT` into a logging table after the
-`SELECT`, containing the results of the `SELECT`, just to ensure that
-the actual state of the database at the end of the run is one that is
-impossable to reach via serialized transactions, and this also happens
-occasionally.
+The `with-log-table` directory has a variant which writes the `SELECT`
+results to a log table, ensuring that the actual state of the database
+reflects the transactions not having run serially.
