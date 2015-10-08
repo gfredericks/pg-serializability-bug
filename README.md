@@ -1,6 +1,8 @@
 # Postgres Serializability Bug
 
-The follow applies to at least postgres 9.3, 9.4, and 9.5.
+This has been reported as [BUG #13667](http://www.postgresql.org/message-id/flat/20151008100036.8427.63845@wrigleys.postgresql.org#20151008100036.8427.63845@wrigleys.postgresql.org), and may be the same as [BUG #11732](http://www.postgresql.org/message-id/2081625385.1952368.1420067509048.JavaMail.yahoo@jws100150.mail.ne1.yahoo.com).
+
+The following applies to at least postgres 9.3, 9.4, and 9.5.
 
 To reproduce, run `./run-test.sh` if you have a postgres running on
 localhost; you can set the `PG_USER` and `PG_DB` env variables as
