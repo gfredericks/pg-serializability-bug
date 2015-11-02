@@ -8,13 +8,14 @@
 
 export PG_USER=${PG_USER:-postgres}
 export PG_DB=${PG_DB:-postgres}
+export PG_HOST=${PG_HOST:-localhost}
 
 
 psql -f create-schema.sql $PG_DB $PG_USER
 
 for i in `seq 1 2000`;
 do
-  psql -f prep.sql $PG_DB $PG_USER 2>&1 > /dev/null
+  psql -h $PG_HOST -f prep.sql $PG_DB $PG_USER 2>&1 > /dev/null
 
   ./retry-loop.sh A &
   PID_A=$!
