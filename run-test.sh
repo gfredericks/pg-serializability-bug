@@ -12,7 +12,7 @@ export PG_HOST=${PG_HOST:-localhost}
 export PG_PORT=${PG_PORT:-5432}
 
 
-psql -f create-schema.sql $PG_DB $PG_USER
+psql -h $PG_HOST -p $PG_PORT -f create-schema.sql $PG_DB $PG_USER
 
 for i in `seq 1 2000`;
 do
